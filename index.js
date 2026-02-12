@@ -14,6 +14,14 @@ const loadLevelWord = (id) => {
 const displayLevelWord = (words) => {
     const wordContainer = document.getElementById("word-container");
     wordContainer.innerHTML = "";
+    if (words.length == 0) {
+        wordContainer.innerHTML = `<div class="text-center  col-span-full py-10 rounded-xl space-y-6 font-bangla">
+                <img class="mx-auto" src="./assets/alert-error.png" />
+              <p class="font-medium text-xl text-gray-400">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+              <h2 class="text-4xl font-bold">নেক্সট Lesson এ যান</h2>
+            </div>`;
+        return;
+    }
 //     {
 // "id": 4,
 // "level": 5,
@@ -25,9 +33,10 @@ const displayLevelWord = (words) => {
         const card = document.createElement("div");
         card.innerHTML = `<div 
             class="bg-white rounded-xl shadow-sm text-center py-10 px-5 space-y-4">
-              <h2 class="font-bold text-2xl">${word.word}</h2>
-              <p class="font-semibold">${word.pronunciation}</p>
-              <div class="text-2xl font-medium font-bangla">${word.meaning}</div>
+            
+              <h2 class="font-bold text-2xl">${word.word ? word.word : "Word not found"}</h2>
+              <p class="font-semibold">${word.pronunciation ? word.pronunciation : "Word pronunciation not found"}</p>
+              <div class="text-2xl font-medium font-bangla">${word.meaning ? word.meaning : "Word meaning not found"}</div>
               <div class="flex justify-between items-center">
                 <button class="btn bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-circle-info"></i></button>
                 <button class="btn bg-[#1A91FF10] hover:bg-[#1A91FF80]"><i class="fa-solid fa-volume-high"></i></button>
