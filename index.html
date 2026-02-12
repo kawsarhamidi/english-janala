@@ -19,6 +19,7 @@
 
 </head>
 <body>
+  <!-- nav bar -->
         <header>
             <div class="navbar bg-base-100 shadow-sm">
   <div class="navbar-start">
@@ -29,15 +30,15 @@
       <ul
         tabindex="-1"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
         <li>
-          <a>Parent</a>
-          <ul class="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
+        <a href="" class=""><i class="fa-solid fa-circle-question"></i>FAQ</a>
+      </li>
+      <li>
+        <a href="" class=""><i class="fa-solid fa-book-open"></i></i>Learn</a>
+      </li>
+      <li>
+        <a href="" class=""><i class="fa-solid fa-arrow-right-from-bracket"></i></i>Logout</a>
+      </li>
       </ul>
     </div>
     <a href="" class="flex items-center gap-1">
@@ -47,12 +48,29 @@
     </a>
   </div>
   <div class="navbar-end hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <a href="">FAQ</a>
+    <ul class="menu menu-horizontal px-1 space-x-4">
+      <li>
+        <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i>FAQ</a>
+      </li>
+      <li>
+        <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i></i>Learn</a>
+      </li>
+      <li>
+        <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i></i>Logout</a>
+      </li>
     </ul>
   </div>
   
 </div>
         </header>
+        <section class="flex flex-col-reverse md:flex-row gap-10 justify-between items-center py-5 w-11/12 mx-auto">
+          <div class="content flex-1 text-center md:text-left">
+            <h2 class="text-4xl font-bold mb-8"><span class="text-sky-400">English</span><span> is Easy!!/span></h2>
+              <p class="font-bangla">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+          </div>
+          <div class="image flex-1">
+            <img src="./assets/hero-student.png" alt="">
+          </div>
+        </section>
 </body>
 </html>
